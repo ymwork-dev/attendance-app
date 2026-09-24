@@ -109,13 +109,13 @@ erDiagram
 1. **リポジトリをクローン**
 
     ```bash
-    git clone git@github.com:ymwork-dev/attendance-management-app.git
+    git clone git@github.com:ymwork-dev/attendance-app.git
     ```
 
 2. **プロジェクトディレクトリへ移動**
 
     ```bash
-    cd attendance-management-app/src
+    cd attendance-app/src
     ```
 
 3. **.env ファイルの作成**
