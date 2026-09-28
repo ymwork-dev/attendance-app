@@ -129,7 +129,7 @@ class T15_AdminAttendanceCorrectionTest extends TestCase
         ]);
 
         // 管理者ログインして作成したスタッフの管理者用修正申請承認画面を表示し、承認ボタンを押す
-        $response = $this->actingAs($admin)->post(route('admin.request.approve', ['attendance_correct_request_id' => $requestData->id]), [
+        $response = $this->actingAs($admin)->post(route('admin.request.approve.update', ['attendance_correct_request_id' => $requestData->id]), [
             'action' => 'approve'
         ]);
 
@@ -175,7 +175,7 @@ class T15_AdminAttendanceCorrectionTest extends TestCase
         ]);
 
         // 管理者ログインして却下ボタンを押す
-        $response = $this->actingAs($admin)->post(route('admin.request.approve', ['attendance_correct_request_id' => $requestData->id]), [
+        $response = $this->actingAs($admin)->post(route('admin.request.approve.update', ['attendance_correct_request_id' => $requestData->id]), [
             'action' => 'reject'
         ]);
 
@@ -210,7 +210,7 @@ class T15_AdminAttendanceCorrectionTest extends TestCase
         ]);
 
         // action が想定外の値の場合
-        $response = $this->actingAs($admin)->post(route('admin.request.approve', ['attendance_correct_request_id' => $requestData->id]), [
+        $response = $this->actingAs($admin)->post(route('admin.request.approve.update', ['attendance_correct_request_id' => $requestData->id]), [
             'action' => 'unknown'
         ]);
 

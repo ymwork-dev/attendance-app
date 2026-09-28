@@ -101,7 +101,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/stamp_correction_request/approve/{attendance_correct_request_id}', [AdminAttendanceController::class, 'showApproveView'])->name('request.approve');
 
         // 修正申請の承認処理実行
-        Route::post('/stamp_correction_request/approve/{attendance_correct_request_id}', [AdminAttendanceController::class, 'approveRequest'])->name('request.approve');
+        Route::post('/stamp_correction_request/approve/{attendance_correct_request_id}', [AdminAttendanceController::class, 'approveRequest'])->name('request.approve.update');
 
         // 勤怠一覧画面(管理者)
         Route::get('/attendance/list', [AdminAttendanceController::class, 'showDailyList'])->name('attendance.list');

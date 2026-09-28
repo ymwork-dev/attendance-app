@@ -11,7 +11,7 @@
     <div class="attendanceDetailForm">
         <h2 class="attendanceDetailTitle">勤怠詳細</h2>
 
-        <form action="{{ route('admin.request.approve', $requestData->id) }}" method="POST">
+        <form action="{{ route('admin.request.approve.update', $requestData->id) }}" method="POST">
             <!-- 不正なPOST送信を防ぐための認証トークン -->
             @csrf
 
