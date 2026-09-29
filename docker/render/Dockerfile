@@ -31,4 +31,7 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 COPY docker/render/nginx.conf /etc/nginx/http.d/default.conf
 COPY docker/render/start.sh /start.sh
 
+# AivenのCA証明書を置く（本番のDBと暗号化してつなぐときに使う）
+COPY docker/render/aiven-ca.pem /etc/ssl/aiven-ca.pem
+
 CMD ["sh", "/start.sh"]
