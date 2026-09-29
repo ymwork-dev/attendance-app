@@ -22,6 +22,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'admin' => EnsureUserIsAdmin::class,
         ]);
+        // Renderの入口（プロキシ）が付ける「元はhttpsだった」という情報を信頼する
+        $middleware->trustProxies(at: '*');
     })
     //エラー処理の設定
     ->withExceptions(function (Exceptions $exceptions): void {
