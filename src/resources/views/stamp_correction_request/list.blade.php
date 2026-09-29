@@ -1,10 +1,6 @@
 @extends('layouts.app')<!-- 共通レイアウト(ヘッダー含む)を継承 -->
 
-@section('css')<!-- Googleフォントを読み込み -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&display=swap" rel="stylesheet">
-
+@section('css')
     @vite(['resources/css/stamp_correction_list.css']) <!-- 専用のCSSを読み込み Vite経由(高速なフロントエンド構築ツール) -->
 @endsection
 
