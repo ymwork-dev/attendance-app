@@ -1,0 +1,16 @@
+name: Keep Alive
+
+on:
+  schedule:
+    # 毎日 日本時間の9時に実行（GitHubの時刻はUTCなので、9時間引いた0時を書く）
+    - cron: '0 0 * * *'
+  # Actionsの画面から手動でも実行できるようにする
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 公開デモにアクセスして、DB（Aiven）を使わせる
+        run: curl --fail --silent --show-error --max-time 180 --retry 3 --retry-delay 30 --output /dev/null https://attendance-app-4v7w.onrender.com/login
+        
