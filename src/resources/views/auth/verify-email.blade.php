@@ -16,10 +16,13 @@
                 登録していただいたメールアドレスに認証メールを送付しました。<br>
                 メール認証を完了してください。
             </div>
-            <!-- 認証はこちらからボタン -->
-            <a href="/email/go-to-mailpit" class="btn-verify" target="_blank">
-                認証はこちらから
-            </a>
+            <!-- 認証はこちらからボタン（デモではメールを送らないため、押すと認証完了） -->
+            <form method="POST" action="{{ route('email.bypass') }}">
+                @csrf
+                <button type="submit" class="btn-verify">
+                    認証はこちらから
+                </button>
+            </form>
 
             <!-- もし再送が成功したらお知らせを表示 -->
             @if (session('status') == 'verification-link-sent')

@@ -25,11 +25,6 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-// Mailpitの画面へ簡単に移動するためのルート
-Route::get('/email/go-to-mailpit', function () {
-    return redirect('http://localhost:8025');
-});
-
 // メール認証機能確認用の強制パスルート
 Route::post('/email/bypass', function () {
     //ログインしているユーザー情報を取得

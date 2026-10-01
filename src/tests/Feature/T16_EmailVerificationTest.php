@@ -45,7 +45,7 @@ class T16_EmailVerificationTest extends TestCase
     }
 
     #[Test]
-    public function メール認証誘導画面で認証はこちらからボタンを押下するとメール認証サイトに遷移する(): void
+    public function メール認証誘導画面で認証はこちらからボタンを押下すると認証が完了し勤怠登録画面に遷移する(): void
     {
         $user = User::factory()->create([
             // メール認証が未完了の状態でテスト用ユーザーを作成
@@ -56,10 +56,11 @@ class T16_EmailVerificationTest extends TestCase
         $response = $this->actingAs($user)->get('/email/verify');
         $response->assertStatus(200);
 
-        // メール認証サイトにアクセスし、メール認証画面にリダイレクトされることを検証
-        $response = $this->actingAs($user)->get('/email/go-to-mailpit');
-        $response->assertStatus(302);
-        $response->assertRedirect('http://localhost:8025');
+        // 認証はこちらからボタンを押すと、勤怠登録画面にリダイレクトされることを検証
+        $response = $this->actingAs($user)->post('/email/bypass');
+        $response->assertRedirect(route('attendance.index'));
+        // スタッフがメール認証済みになっていることを確認
+        $this->assertTrue($user->fresh()->hasVerifiedEmail());
     }
 
     #[Test]
