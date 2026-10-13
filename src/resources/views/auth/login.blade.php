@@ -69,6 +69,10 @@
                 @csrf
                 <button type="submit" class="btn-demo">デモ用従業員としてログイン</button>
             </form>
+            <p class="demo-login-account">
+                手入力でもログインできます<br>
+                demo@example.com / demo1234
+            </p>
         </div>
     </div>
 @endsection

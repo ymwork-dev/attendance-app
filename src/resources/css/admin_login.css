@@ -97,7 +97,6 @@
     color: var(--muted);
 }
 
-/* デモ用ログインボタン(副次アクションなので枠線のみのスタイル) */
 .form-button--demo {
     display: block;
     width: 100%;
@@ -114,4 +113,12 @@
 
 .form-button--demo:hover {
     background-color: var(--bg);
+}
+
+.demo-login-account {
+    margin: 12px 0 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
 }
