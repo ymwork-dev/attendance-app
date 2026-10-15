@@ -200,3 +200,80 @@
     margin: 0;
     text-align: center;
 }
+
+/* スマホ幅(768px以下)の申請承認 */
+@media (max-width: 768px) {
+    /* 画面全体の上下左右の余白を小さくする */
+    .attendanceDetailMain {
+        padding: 0 16px 24px;
+    }
+
+    /* 表と状態メッセージを画面の幅に合わせる */
+    .attendanceDetailForm,
+    .approvalPendingOutside {
+        width: 100%;
+    }
+
+    /* タイトルを少し小さくする */
+    .attendanceDetailTitle {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    /* 表を横並びではなく、縦に積む形にする */
+    .attendanceTable,
+    .attendanceTable tbody,
+    .attendanceTable tr,
+    .attendanceTable th,
+    .attendanceTable td {
+        display: block;
+    }
+
+    /* 見出しと内容の幅・余白・文字を小さくする */
+    .attendanceTable th,
+    .attendanceTable td {
+        width: auto;
+        padding: 0 16px;
+        font-size: 15px;
+    }
+
+    /* 見出し(上) */
+    .attendanceTable th {
+        padding-top: 16px;
+        padding-bottom: 6px;
+    }
+    .attendanceTable td {
+        padding-bottom: 16px;
+    }
+
+    /* 日付・時刻の大きなすき間をなくす */
+    .dateDisplayGroup,
+    .timeRangeGroup {
+        gap: 8px;
+    }
+
+    .dateYearText,
+    .dateDayText {
+        margin: 0;
+    }
+
+    /* 時刻・備考の文字を小さくする */
+    .inputTimeField,
+    .timeSeparator,
+    .textareaRemarksField {
+        font-size: 15px;
+    }
+
+    /* 却下・承認ボタンを半分ずつの幅で並べる */
+    .rejectButton,
+    .submitUpdateButton {
+        flex: 1;
+        padding: 12px 0;
+    }
+
+    /* 状態メッセージを横いっぱいにする */
+    .approvalPendingMessage {
+        width: 100%;
+        font-size: 15px;
+    }
+}

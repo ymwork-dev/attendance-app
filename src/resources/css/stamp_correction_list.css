@@ -184,3 +184,69 @@ main.request-management .success-message {
     border-radius: 20px;
     white-space: nowrap;
 }
+
+/* スマホ幅(768px以下)の申請一覧 */
+@media (max-width: 768px) {
+    /* 画面の幅いっぱいにして、左右に余白をとる */
+    .requestListForm {
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    /* 上の余白を小さくする */
+    .request-management {
+        padding-top: 24px;
+    }
+
+    /* タイトルとメッセージが並びきらなければ折り返す */
+    main.request-management .title-container {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    /* タイトルを少し小さくする */
+    main.request-management .page-title {
+        font-size: 22px;
+    }
+
+    /* 成功メッセージを小さくし、長ければ改行する */
+    main.request-management .success-message {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    /* タブの間隔と文字を小さくする */
+    .tab-navigation {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .tab-item {
+        font-size: 15px;
+    }
+
+    /* 表の部分だけ横にスクロールできるようにする */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    /* 表の文字を小さくし、セルの中では改行しない */
+    .table-request th,
+    .table-request td {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* 1列目の左の大きな余白を小さくする */
+    .table-request th:first-child,
+    .table-request td:first-child {
+        padding-left: 12px;
+    }
+
+    /* 最後の列の右の大きな余白を小さくする */
+    .table-request th:last-child,
+    .table-request td:last-child {
+        padding-right: 12px;
+    }
+}

@@ -171,3 +171,61 @@ body .main-content {
     background-color: var(--bg);
 }
 
+/* スマホ幅(768px以下)の勤怠一覧 */
+@media (max-width: 768px) {
+    /* 画面の幅いっぱいにして、左右に余白をとる */
+    .attendance-list-container {
+        width: 100%;
+        padding: 0 16px 24px;
+    }
+
+    /* タイトル・日付切替・表の最小幅をなくし、画面の幅に合わせる */
+    .attendance-list-container h1,
+    .date-selector,
+    .table-wrapper {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* タイトルを少し小さくする */
+    .attendance-list-container h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    /* 表示中の日付を小さくする */
+    .date-selector .current-date-display {
+        font-size: 18px;
+    }
+
+    /* 前日・翌日ボタンを小さくする */
+    .date-selector .nav-btn {
+        font-size: 14px;
+    }
+
+    /* 表の文字と上下の余白を小さくする */
+    .table-wrapper th,
+    .table-wrapper td {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+
+    /* 名前の列を少し広げ、左の余白を小さくする */
+    .table-wrapper th:nth-child(1),
+    .table-wrapper td:nth-child(1) {
+        width: 26%;
+        padding-left: 8px;
+    }
+
+    /* 詳細の列を狭くし、右の余白を小さくする */
+    .table-wrapper th:nth-child(6),
+    .table-wrapper td:nth-child(6) {
+        width: 14%;
+        padding-right: 8px;
+    }
+
+    /* 詳細リンクの文字を表に合わせる */
+    .table-wrapper .detail-link {
+        font-size: 13px;
+    }
+}

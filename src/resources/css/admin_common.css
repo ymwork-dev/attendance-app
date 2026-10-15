@@ -109,3 +109,37 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* スマホ幅(768px以下)のヘッダー */
+@media (max-width: 768px) {
+    /* ロゴとメニューを縦に積み、高さを中身に合わせる */
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 12px 16px;
+    }
+
+    /* ロゴを少し小さくする */
+    .header__logo-text {
+        font-size: 20px;
+    }
+
+    /* メニューを中央にそろえ、入りきらなければ折り返す */
+    .header__nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 20px;
+    }
+
+    /* メニューの文字を小さくし、言葉の途中で改行しない */
+    .header__nav-link {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    /* メイン画面の上の余白を小さくする */
+    .main-content {
+        padding-top: 24px;
+    }
+}

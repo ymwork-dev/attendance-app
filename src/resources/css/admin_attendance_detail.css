@@ -211,3 +211,97 @@ body .main-content {
     margin: 0;
     font-weight: normal;
 }
+
+/* スマホ幅(768px以下)の勤怠詳細 */
+@media (max-width: 768px) {
+    /* 画面の幅いっぱいにして、左右に余白をとる */
+    .attendanceDetailMain {
+        width: 100%;
+        margin-top: 0;
+        padding: 0 16px 24px;
+    }
+
+    /* 最小幅をなくし、画面の幅に合わせる */
+    .attendanceDetailForm,
+    .approvalPendingOutside {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* タイトルを少し小さくする */
+    .attendanceDetailTitle {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    /* 表を横並びではなく、縦に積む形にする */
+    .attendanceTable,
+    .attendanceTable tbody,
+    .attendanceTable tr,
+    .attendanceTable th,
+    .attendanceTable td {
+        display: block;
+    }
+
+    /* 見出しと内容の幅・余白・文字を小さくする */
+    .attendanceTable th,
+    .attendanceTable td {
+        width: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 15px;
+    }
+
+    /* 見出し(上) */
+    .attendanceTable th {
+        padding-top: 16px;
+        padding-bottom: 6px;
+    }
+
+    /* 内容(下) */
+    .attendanceTable td {
+        padding-top: 0;
+        padding-bottom: 16px;
+    }
+
+    /* 日付・時刻の間隔を狭くする */
+    .dateDisplayGroup,
+    .timeRangeGroup {
+        gap: 8px;
+    }
+
+    /* 年・月日の幅を文字に合わせる */
+    .dateYearText,
+    .dateDayText {
+        width: auto;
+    }
+
+    /* 時刻の入力欄を少し狭くする */
+    .inputTimeField {
+        width: 110px;
+        padding: 0 8px;
+        font-size: 15px;
+    }
+
+    /* 〜の幅を狭くする */
+    .timeSeparator {
+        width: 20px;
+    }
+
+    /* 備考欄を横いっぱいにする */
+    .textareaRemarksField {
+        max-width: none;
+        font-size: 15px;
+    }
+
+    /* 修正ボタンを横いっぱいにする */
+    .submitUpdateButton {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    /* 承認待ちメッセージを小さくする */
+    .approvalPendingMessage {
+        font-size: 16px;
+    }
+}

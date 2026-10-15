@@ -122,3 +122,36 @@ body {
     text-decoration: underline;
 }
 
+/* スマホ幅(768px以下)のスタッフ一覧 */
+@media (max-width: 768px) {
+    /* 上下の余白を小さくする */
+    .requestListMain {
+        padding-top: 0;
+        padding-bottom: 24px;
+    }
+
+    /* 画面の幅いっぱいにして、左右に余白をとる */
+    .requestListForm {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    /* タイトルを少し小さくする */
+    .page-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    /* 表の部分だけ横にスクロールできるようにする */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    /* 表の文字と余白を小さくし、セルの中では改行しない */
+    .table-request th,
+    .table-request td {
+        padding: 10px 12px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}

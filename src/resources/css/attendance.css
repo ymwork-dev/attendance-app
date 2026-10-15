@@ -109,3 +109,16 @@ main {
     color: var(--ink);
     margin-top: 20px;
 }
+
+/* スマホ幅(768px以下)の打刻画面 */
+@media (max-width: 768px) {
+    /* ボタンが2つ並んでも収まるよう、すき間を狭くする */
+    .button-area {
+        gap: 16px;
+    }
+
+    /* ボタンの幅を狭くする */
+    .btn-attendance {
+        width: 140px;
+    }
+}

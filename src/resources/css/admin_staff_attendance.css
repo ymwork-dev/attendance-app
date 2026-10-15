@@ -196,3 +196,63 @@ table td {
     border-radius: 20px;
     white-space: nowrap;
 }
+
+/* スマホ幅(768px以下)のスタッフ別勤怠一覧 */
+@media (max-width: 768px) {
+    /* 画面の幅いっぱいにして、左右に余白をとる */
+    #attendance-list-container {
+        width: 100%;
+        margin: 0 auto 24px;
+        padding: 0 16px;
+    }
+
+    /* タイトルとメッセージが並びきらなければ折り返す */
+    .attendance-title-wrapper {
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 20px;
+    }
+
+    /* 成功メッセージを小さくし、長ければ改行する */
+    .successMessage {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    /* 月切替の上の余白を小さくする */
+    #month-selector {
+        margin-top: 20px;
+    }
+
+    /* 表示中の月を小さくする */
+    #month-selector .current-month-display {
+        font-size: 18px;
+    }
+
+    /* 前月・翌月ボタンを小さくする */
+    #month-selector .nav-btn {
+        font-size: 14px;
+    }
+
+    /* 表の部分だけ横にスクロールできるようにする */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    /* 表の文字と余白を小さくし、セルの中では改行しない */
+    table th,
+    table td {
+        padding: 10px 8px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    /* CSV出力ボタンを横いっぱいにする */
+    .csv-download-btn {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+}
