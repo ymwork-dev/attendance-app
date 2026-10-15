@@ -137,3 +137,14 @@ body .login-box .btn-demo:hover {
     color: var(--muted);
     line-height: 1.7;
 }
+
+/* スマホ幅(768px以下)では、フォームが画面より縦に長くなり、
+   真ん中に固定するとヘッダーに重なるので、ヘッダーの下に普通に並べる */
+@media (max-width: 768px) {
+    html body .login-box {
+        position: static;
+        transform: none;
+        margin: 40px auto;
+    }
+}
+
